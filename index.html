@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffe6ef" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>For Malshi 💌</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-heart">💗</div>
+    <p>making something cute for Malshi...</p>
+  </div>
+
+  <div class="background-softness" aria-hidden="true">
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="blob blob-three"></div>
+  </div>
+
+  <div class="floaters" id="floaters" aria-hidden="true"></div>
+  <canvas id="sparkleCanvas" aria-hidden="true"></canvas>
+
+  <main class="stage">
+    <section class="hero-card" aria-label="Love letter intro">
+      <div class="mini-badge">made with love by Denuwan</div>
+      <h1>For my Malshi</h1>
+      <p class="type-line" id="typeLine" data-text="A tiny cute letter for the girl who makes my world softer."></p>
+
+      <div class="love-display">
+        <div class="phone-preview" aria-label="Cute mobile phone preview">
+          <div class="phone-spark spark-one">💗</div>
+          <div class="phone-spark spark-two">✨</div>
+          <div class="phone-spark spark-three">💕</div>
+          <div class="phone-frame">
+            <div class="phone-notch"></div>
+            <div class="phone-status">
+              <span>8:06</span>
+              <span>💗 100%</span>
+            </div>
+            <div class="phone-screen">
+              <div class="phone-wallpaper-heart">♡</div>
+              <div class="phone-notification">
+                <span class="app-dot">💌</span>
+                <div>
+                  <strong>Love Letter</strong>
+                  <p>Denuwan sent something cute for Malshi.</p>
+                </div>
+              </div>
+              <div class="phone-chat incoming">open this when you miss me 🥺</div>
+              <div class="phone-chat outgoing">for Malshi only 💕</div>
+              <button class="phone-open" id="phoneOpenBtn">open letter on phone</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="envelope-area">
+          <div class="envelope-wrap" id="envelopeWrap" role="button" tabindex="0" aria-label="Open love letter">
+            <div class="envelope">
+              <div class="letter-peek">
+                <span>Malshi 💕</span>
+              </div>
+              <div class="envelope-body"></div>
+              <div class="flap-bottom"></div>
+              <div class="flap-left"></div>
+              <div class="flap-right"></div>
+              <div class="flap-top"></div>
+              <div class="seal">💌</div>
+              <div class="tiny-heart heart-a">♡</div>
+              <div class="tiny-heart heart-b">♡</div>
+            </div>
+          </div>
+          <button class="open-hint" id="openHint">tap the envelope, love ✨</button>
+        </div>
+      </div>
+
+      <div class="cute-stats" aria-label="Cute love details">
+        <div>
+          <strong>01</strong>
+          <span>special girl</span>
+        </div>
+        <div>
+          <strong>∞</strong>
+          <span>love level</span>
+        </div>
+        <div>
+          <strong>Jan 6</strong>
+          <span>our day</span>
+        </div>
+      </div>
+
+      <p class="mobile-love-note">💗</p>
+    </section>
+  </main>
+
+  <div class="letter-modal" id="letterModal" aria-hidden="true">
+    <article class="letter-card" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+      <button class="close-btn" id="closeBtn" aria-label="Close letter">✕</button>
+
+      <div class="letter-top">
+        <span class="letter-eyebrow">a little something for</span>
+        <h2 id="letterTitle">Malshi 💗</h2>
+        <p>from the boy who loves you more than words can say</p>
+      </div>
+
+      <div class="letter-body">
+        <p>Hi Malshi,</p>
+        <p>I made this little page just for you because you deserve something soft, cute, and special. You are my favourite person, my peace, and the girl who makes even a normal day feel beautiful.</p>
+        <p>I love the way you make my heart feel calm. I love your smile, your kindness, your little cute mood changes, and the way you somehow make everything better just by being you.</p>
+        <p>Sometimes I may not say everything perfectly, but I hope this reminds you that you are loved so much. You are precious to me, and I am really lucky to have you in my life.</p>
+        <p>So this is your official cute notice: you are my Malshi, my Princess, my favourite chapter, and I choose you again and again.</p>
+      </div>
+
+      <div class="promise-box">
+        <button id="promiseBtn">press for a tiny promise 💞</button>
+        <p id="promiseText">I promise to keep loving you in my own silly, real, loyal way.</p>
+      </div>
+
+      <div class="love-reasons">
+        <div>
+          <span>🌸</span>
+          <h3>Your softness</h3>
+          <p>You make life feel gentle.</p>
+        </div>
+        <div>
+          <span>🥺</span>
+          <h3>Your cuteness</h3>
+          <p>Even your small things stay in my heart.</p>
+        </div>
+        <div>
+          <span>💖</span>
+          <h3>Your love</h3>
+          <p>It means more to me than you know.</p>
+        </div>
+      </div>
+
+      <div class="signature">Forever yours, Denuwan</div>
+
+      <div class="heart-row" id="heartRow" aria-label="Reaction buttons">
+        <button class="heart-btn" data-emoji="❤️">❤️</button>
+        <button class="heart-btn" data-emoji="💖">💖</button>
+        <button class="heart-btn" data-emoji="🥰">🥰</button>
+        <button class="heart-btn" data-emoji="💋">💋</button>
+        <button class="heart-btn" data-emoji="✨">✨</button>
+      </div>
+      <div class="reveal-line" id="reactionLine">tap a heart and see the magic</div>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
